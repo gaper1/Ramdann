@@ -1,0 +1,145 @@
+/* إعداد الصفحة */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #2020d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  background-color: #080808;
+  min-height: 80vh;
+  }
+  
+  /* الحاوية الرئيسية */
+  .container {
+    text-align: center;
+    background-color: #080808;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* العنوان */
+  .header h1 {
+    font-size: 3em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1.5em;
+    color: #f8e9e9;
+  }
+  
+  /* الصورة الرمضانية */
+  .ramadan-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* الرسالة */
+  .message {
+    margin-top: 20px;
+  }
+  
+  .message h2 {
+    font-size: 2em;
+    color:gold;
+  
+}
+  .message p {
+    color: #f4f4f9;
+        display:block;
+        font-size: 26px;
+        font-weight: bold;
+        border-right: 3px solid rgb(241, 232, 232);
+        padding-right: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 370px; /* تحديد عرض الحاوية */
+        border: 1px solid #000; /* إضافة حد حول الحاوية */
+        padding: 10px; /* إضافة مساحة داخل الحاوية */
+        word-wrap: break-word;
+  }
+       /* animation: typing 4s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes blink-caret {
+        50% {
+            border-color: transparent;
+        }
+        100% {
+            border-color: black;
+        }
+        
+    }
+    
+    @keyframes move-text {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+        }
+    
+    }
+    
+  
+  
+   تذييل الصفحة */
+  .footer {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #444;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+  }
+  img{
+    width:300px;
+      height: 300px;
+      border-radius: 50%;
+      
+        background-size: cover;
+        position: relative;
+        animation: moveImage 10s infinite alternate; /* تحريك الصورة */
+    }
+
+    @keyframes moveImage {
+       
+  
+        0% {
+            transform: rotate(0deg); /* البداية بدون ميل */
+        }
+        25% {
+            transform: rotate(-10deg); /* ميل لليسار */
+        }
+        50% {
+            transform: rotate(10deg); /* ميل لليمين */
+        }
+        75% {
+            transform: rotate(-10deg); /* ميل لليسار مرة أخرى */
+        }
+        100% {
+            transform: rotate(0deg); /* العودة إلى الوضع الطبيعي */
+        }
+  
+    }

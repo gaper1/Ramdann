@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تهنئة رمضان كريم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>رمضان كريم</h1>
+      <p>كل عام وأنتم بخير، رمضان مبارك</p>
+    </div>
+    <div class="content">
+      <img src="op.jpg.jpg" class="rotate" id="myImage"  >
+      <div class="message">
+        <h2>مبارك عليكم الشهر</h2>
+        <p id="typing"> س</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>أطيب التمنيات لكم بعام مليء بالسلام والتوفيق</p>
+    </div>
+  </div>
+  <script>
+    let text = "نسأل الله أن يجعل رمضان هذا العام رمضانًا مباركًا، وأن يعيده علينا وعليكم بالخير والبركاتت";
+    let index = 0;
+    let speed = 150; // سرعة الكتابة
+    let deleting = false;
+
+    function typeWriter() {
+        let element = document.getElementById("typing");
+        if (deleting) {
+            element.innerText = text.substring(0, index--);
+            if (index == 0) {
+                deleting = false;
+                setTimeout(typeWriter, 500); // وقت الانتظار قبل الكتابة من جديد
+            } else {
+                setTimeout(typeWriter, speed / 2);
+            }
+        } else {
+            element.innerText = text.substring(0, index++);
+            if (index === text.length) {
+                deleting = true;
+                setTimeout(typeWriter, 1000); // وقت الانتظار قبل المسح
+            } else {
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+
+    typeWriter(); // بدء التأثير
+    
+    var images = ["op.jpg.jpg", "img/po2.PNG", "img/po1.PNG"]; // قائمة الصور
+        var currentImageIndex = 0; // بداية الصورة الأولى
+
+        // دالة لتغيير الصورة
+        function changeImage() {
+            var image = document.getElementById("myImage");
+            
+            // تغيير الصورة إلى الصورة التالية في القائمة
+            currentImageIndex = (currentImageIndex + 1) % images.length; // التكرار المستمر
+            image.src = images[currentImageIndex]; // تعيين الصورة الجديدة
+        }
+
+        // تغيير الصورة كل 3 ثوانٍ (10000 مللي ثانية)
+        setInterval(changeImage, 9000); // يتم تغيير الصورة كل 3 ثو
+        </script>
+</script>
+<style>
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  transition: transform 2s ease-in-out; /* تأثير الحركة */
+}
+@keyframes transform{
+            0% {
+                transform: rotate(0deg); /* البداية بدون ميل */
+            }
+            25% {
+                transform: rotate(-10deg); /* ميل لليسار */
+            }
+            50% {
+                transform: rotate(10deg); /* ميل لليمين */
+            }
+            75% {
+                transform: rotate(-10deg); /* ميل لليسار مرة أخرى */
+            }
+            100% {
+                transform: rotate(0deg); /* العودة إلى الوضع الطبيعي */
+            }
+        }
+        </style>
+        <audio id="myAudio">
+    <source src="8.mp3" type="audio/mpeg">
+    متصفحك لا يدعم تشغيل الصوت.
+</audio>
+
+<script>
+// تشغيل الصوت عند فتح الصفحة
+window.onload = function() {
+    var audio = document.getElementById("myAudio");
+    audio.addEventListener('ended', function() {
+      audio.play(); 
+    });// إعادة تشغيل الصوت
+    audio.play();
+};
+</script>
